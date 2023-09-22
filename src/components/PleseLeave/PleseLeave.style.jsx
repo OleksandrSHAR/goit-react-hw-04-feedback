@@ -21,26 +21,25 @@ export const FetbeckEl = styled.ul`
   gap: 10px;
   justify-content: center;
 `;
-
-export const FetbeckItem = styled.li`
+export const GoodBut = styled.li`
   :hover {
-    background-color: ${props => {
-      switch (props.option) {
-        case 'good':
-          return '#04FF20';
-        case 'neutral':
-          return '#E0EB54';
-        case 'bad':
-          return '#FF050B';
-        default:
-          return null;
-      }
-    }};
+    background-color: ${p => p.theme.colors.gren};
   }
 `;
+export const NeutralBut = styled.li`
+  :hover {
+    background-color: ${p => p.theme.colors.yeloow};
+  }
+`;
+export const BadBut = styled.li`
+  :hover {
+    background-color: ${p => p.theme.colors.red};
+  }
+`;
+
 export const BtFetbeck = styled.button`
   font-family: Epilogue;
-
+  width: 75px;
   font-style: normal;
   font-weight: 500;
   padding: 3px;

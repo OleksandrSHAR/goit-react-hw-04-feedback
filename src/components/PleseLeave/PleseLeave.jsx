@@ -1,7 +1,9 @@
 import PropTypes, { arrayOf } from 'prop-types';
 import {
   BtFetbeck,
-  FetbeckItem,
+  GoodBut,
+  NeutralBut,
+  BadBut,
   FetbeckEl,
   WrapFetbeck,
 } from './PleseLeave.style';
@@ -10,21 +12,21 @@ export const PleseLeave = ({ setBad, setNeutral, setGoog }) => {
   return (
     <WrapFetbeck>
       <FetbeckEl>
-        <FetbeckItem>
+        <GoodBut>
           <BtFetbeck type="button" onClick={() => setGoog(prev => prev + 1)}>
             Good
           </BtFetbeck>
-        </FetbeckItem>
-        <FetbeckItem>
+        </GoodBut>
+        <NeutralBut>
           <BtFetbeck type="button" onClick={() => setNeutral(prev => prev + 1)}>
             Neutral
           </BtFetbeck>
-        </FetbeckItem>
-        <FetbeckItem>
+        </NeutralBut>
+        <BadBut>
           <BtFetbeck type="button" onClick={() => setBad(prev => prev + 1)}>
             Bad
           </BtFetbeck>
-        </FetbeckItem>
+        </BadBut>
       </FetbeckEl>
     </WrapFetbeck>
   );
