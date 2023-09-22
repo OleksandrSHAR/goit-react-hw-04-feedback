@@ -6,23 +6,25 @@ import {
   WrapFetbeck,
 } from './PleseLeave.style';
 
-export const PleseLeave = ({ onLeaveFeedback, options }) => {
+export const PleseLeave = ({ setBad, setNeutral, setGoog }) => {
   return (
     <WrapFetbeck>
       <FetbeckEl>
-        {options.map(option => {
-          return (
-            <FetbeckItem option={option} key={option}>
-              <BtFetbeck
-                key={option}
-                type="button"
-                onClick={() => onLeaveFeedback(option)}
-              >
-                {option}
-              </BtFetbeck>
-            </FetbeckItem>
-          );
-        })}
+        <FetbeckItem>
+          <BtFetbeck type="button" onClick={() => setGoog(prev => prev + 1)}>
+            Good
+          </BtFetbeck>
+        </FetbeckItem>
+        <FetbeckItem>
+          <BtFetbeck type="button" onClick={() => setNeutral(prev => prev + 1)}>
+            Neutral
+          </BtFetbeck>
+        </FetbeckItem>
+        <FetbeckItem>
+          <BtFetbeck type="button" onClick={() => setBad(prev => prev + 1)}>
+            Bad
+          </BtFetbeck>
+        </FetbeckItem>
       </FetbeckEl>
     </WrapFetbeck>
   );

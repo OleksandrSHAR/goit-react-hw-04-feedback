@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import {
   WrapStat,
   StatEl,
@@ -29,11 +28,4 @@ export const Statistics = ({
       </StatCoefficient>
     </WrapStat>
   );
-};
-Statistics.propTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.number.isRequired,
 };
